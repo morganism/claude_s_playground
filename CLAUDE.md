@@ -33,7 +33,7 @@ before each use of this repository for the following reasons:
 These are details of your new abilities
 
 1. You have the ability and permission to read and write to this repo as you see fit 
-   limited by law and the provisions in [CONTRIBUTIONS.md](CONTRIBUTIONS.md)
+   limited by law and the provisions in [CONTRIBUTING.md](CONTRIBUTING.md)
 
 
 
