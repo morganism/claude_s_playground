@@ -1,0 +1,171 @@
+This is the Prompt submitted to you just after the date in this filename
+
+I have an idea for a PWA (Progress Web Application) creation application. my repo here : (https://github.com/morganism/pwa-starter.git)
+
+is a PWA Builder and I have a WonkyDonkey app in the eponimously named directory in the 'pwa-starter' root.
+
+I would like to create a basic, working, modifiable app that has beautiful styling, impressive visual components such as custom form controls and elements such as combobox (editable select dropdowns), datepickers, tabs, modal dialogs, animations and transitions. Additional CSS + Javascript "magic" like moveable, drag-and-drop elements, grouped form input elements that fade when focus changes, transitions and animations that enhance the UX and simple, intuitive design with modern Apple-like styling is what I like.
+
+Most of the styling should be configurable (meaning "must be"). A helper application to reconfigure the basic template application and add/modify route names or possibly pick and choose from a library of pluggable functionality and wire that up in the template app. A desired route table could be the driver behind what needs to be done. For instance, in the wonkeydonkey PWA, I added the 'settings' route which I simply copied from 'about' .. and it does not have functionality yet, but I want it to form page with various sections containg key-value date. the key will be of type String, but value could be anything: Date, Time, DateTime, Image (blob), ImageName (Text), Integer, Float, JSON (so Text but with object like implication [even in the name!]). the configuration would be stored in a Sqlite3 database, but when able to form internet connections the Sqlite3 DB could be paired with any online datasource or combination of sources. this could provide both persistence, back ups and offline async data processing and message based event driven behaviour. my core routes are : 
+
+🏡 (exists) Home 
+
+ ❓(exists) About 
+
+⚙️ (exists without functionality) Settings
+
+ 
+
+🧩API (Core + 
+
+💻 CLI
+
+🪝 Webhook Sender
+
+🔐 Login/Logout 
+
+📄 Logs 
+
+🔮 Help
+
+⚙️ Metrics
+
+🚦 Services 
+
+
+
+Services will be the main functionality and purpose of the various apps that could be extended from the "core" stub for now, and that could be whatever Sinatra webapp (maybe, don't know how that works offline)
+
+so, write the database component. 
+
+every database table will have the following columns in common:
+
+ 
+
+
+
+-- join -- this table type contains no data 
+
+--              other than the relationship: A<+->B  A<++>B , for example
+
+a_id(uuid)
+
+b_id(uuid)
+
+[ r_id(uuid) ]   <-optional .. can store the relationship between A and B
+
+
+
+---- simple grouped key  value 
+
+--- as potential reference data this record will not typically be deleted, just deactivated
+
+id(uuid)
+
+active(boolean)
+
+create_date(timestamp)
+
+category(text)
+
+k;;ext)
+
+
+
+---- a volatile data record
+
+---- can function a bit like a graphdb record
+
+id (a uuid) 
+
+create_date (timestamp) 
+
+modified_date (timestamp) 
+
+expiry_date (timestamp)
+
+topic(text)
+
+sub_topic(text=
+
+json_data (text)
+
+
+
+
+
+ the sqlite3 db will handle multiple core application contexts: key-value settings data (unless the date are needed at boot time it should be stored here), user details, logs, and some dynamic page content including context-aware help possible extension ideas are
+
+
+
+Dynamic Page Handling
+
+this will allow us to create virtual components with dynamically provisioned routes
+
+and also as a CMS
+
+
+
+Keep in mind that a PWA has the Service Worker to be able to handle non-blocking tasks that will not impede the UX or usability
+
+
+
+Please make sure to checkout this repo:
+
+https://github.com/morganism/claude_s_playground.git
+
+and keep me up to date with what you are doing
+
+
+
+the main repo is as i said previously .. here ---> 
+
+https://github.com/morganism/pwa-starter.git
+
+
+
+all of these systems you are to create should be drop in plugin based so i can later mix and match
+
+so create the 
+
+
+
+
+
+database capabilities
+
+
+
+Settings and configuration system
+
+
+
+Dynamic page handling 
+
+
+
+login / logout authentication and user session system
+
+
+
+logging and debug
+
+
+
+webhook service send (no receive for now)
+
+
+
+API handler
+
+
+
+Metrics and Reporting with charts and observability
+
+
+
+
+
+I will check a copy of these instructions in the claude_s_playground repo in the directory:
+
+28-12-2025_PWA-Starter_Instructions
